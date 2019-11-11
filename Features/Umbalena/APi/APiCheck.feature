@@ -32,7 +32,7 @@ Feature: Umbalena APi
       | 14-10-2020  | 14-10-2019 | false      |
     Given Execute check body response with "time_package" key as below
       | name       | price  | status  |
-      | Gói cơ bản | 619000 | publish |
+      | Gói cơ bản | 699000 | publish |
 
   Scenario: /personal/info/
     Given Execute call POST method with uri: "/personal/info/" have params below
