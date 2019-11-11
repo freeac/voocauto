@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: com.vooc.TestRunner.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 22, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 23.037 sec <<< FAILURE!
+Given Execute check body response with "time_package" key as below(Scenario: /personal/package/info/)  Time elapsed: 0.005 sec  <<< FAILURE!
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at com.vooc.Pages.CommonApi.CheckContentResponse(CommonApi.java:125)
+	at com.vooc.StepDefinition.CommonApiSteps.ExecuteCheckContentResponse(CommonApiSteps.java:41)
+	at ?.Given Execute check body response with "time_package" key as below(APiCheck.feature:33)
+
+Scenario: /personal/package/info/  Time elapsed: 0.005 sec  <<< FAILURE!
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at com.vooc.Pages.CommonApi.CheckContentResponse(CommonApi.java:125)
+	at com.vooc.StepDefinition.CommonApiSteps.ExecuteCheckContentResponse(CommonApiSteps.java:41)
+	at ?.Given Execute check body response with "time_package" key as below(APiCheck.feature:33)
+

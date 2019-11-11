@@ -1,0 +1,10 @@
+{
+	"AcceptButton":{
+		"Type":"xpath",
+		"Value":"//span/a[@data-cli_action='accept']"
+	},
+	"FirstName":{
+		"Type":"css",
+		"Value":"input[name='firstname']"
+	}
+}

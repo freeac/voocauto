@@ -1,0 +1,18 @@
+{
+	"UserName": {
+		"Type": "xpath",
+		"Value": "//android.widget.EditText[contains(@text,'Tài khoản Cha mẹ hoặc số điện thoại')]"
+	},
+	"Password": {
+		"Type": "xpath",
+		"Value": "//android.widget.EditText[contains(@text,'Mật khẩu')]"
+	},
+	"SubmitButton": {
+		"Type": "xpath",
+		"Value": "//android.view.ViewGroup[3]//android.widget.TextView"
+	},
+	"Message": {
+		"Type": "xpath",
+		"Value": "//android.widget.TextView[@resource-id='android:id/message']"
+	}
+}

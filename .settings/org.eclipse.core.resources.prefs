@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+encoding//Features/Umbalena/APi=UTF-8
+encoding//src/main/Interface/CommonPage.json=UTF-8
+encoding//src/main/Interface/EAKP_LoginPage.json=UTF-8
+encoding//src/main/Interface/LoginPage.json=UTF-8
+encoding//src/main/apiRef/accounts-login.json=UTF-8
+encoding//src/main/java/com/vooc/Pages/CommonApi.java=UTF-8
+encoding//src/main/java/com/vooc/Pages/CommonPage.java=UTF-8
+encoding//src/main/java/com/vooc/Pages/EAKP_LoginPage.java=UTF-8
+encoding//src/main/java/com/vooc/Pages/LoginPage.java=UTF-8
+encoding//src/main/java/com/voov/Api/HandleApi.java=UTF-8
+encoding//src/test/java/com/vooc/StepDefinition/CommonApiSteps.java=UTF-8
+encoding/<project>=UTF-8

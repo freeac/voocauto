@@ -1,0 +1,4 @@
+cd ..
+
+mvn test
+

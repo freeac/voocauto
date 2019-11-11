@@ -1,0 +1,742 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 35058362,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.SetUp(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 1071360,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "/accounts/login/",
+        "description": "",
+        "id": "umbalena-api;/accounts/login/",
+        "after": [
+          {
+            "result": {
+              "duration": 3534082,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 6920536,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1816531549,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Execute call \"POST\" APi with uri: \"/accounts/login/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "POST",
+                  "offset": 14
+                },
+                {
+                  "val": "/accounts/login/",
+                  "offset": 35
+                }
+              ],
+              "location": "CommonApiSteps.ExecuteAPiWithUri(String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5111042,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Execute check status \"200\" response is true",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 22
+                }
+              ],
+              "location": "CommonApiSteps.ExecuteCheckStatusResponse(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6027522,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Execute check header response as below",
+            "match": {
+              "location": "CommonApiSteps.ExecuteCheckHeaderResponse(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Content-Type",
+                  "Content-Language"
+                ],
+                "line": 8
+              },
+              {
+                "cells": [
+                  "application/json",
+                  "vi"
+                ],
+                "line": 9
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 16722781,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Execute check body response with \"profile\" key as below",
+            "match": {
+              "arguments": [
+                {
+                  "val": "profile",
+                  "offset": 34
+                }
+              ],
+              "location": "CommonApiSteps.ExecuteCheckContentResponse(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "is_active",
+                  "username",
+                  "full_name",
+                  "email",
+                  "phone",
+                  "birth_date",
+                  "expiry_date"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "255",
+                  "true",
+                  "nguyenphuc",
+                  "Nguyễn Văn Phuc",
+                  "Nguyenvanphuc2203@gmail.com",
+                  "+84964357189",
+                  "28-04-1997",
+                  "10/14/2020 03:11"
+                ],
+                "line": 12
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4545709,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.SetUp(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 1088001,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "/profile/user/",
+        "description": "",
+        "id": "umbalena-api;/profile/user/",
+        "after": [
+          {
+            "result": {
+              "duration": 2370135,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 1834241,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 204896514,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Execute call \"GET\" method with uri: \"/profile/user/\" and token",
+            "match": {
+              "arguments": [
+                {
+                  "val": "GET",
+                  "offset": 14
+                },
+                {
+                  "val": "/profile/user/",
+                  "offset": 37
+                }
+              ],
+              "location": "CommonApiSteps.ExecuteAPiWithUriToken(String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1277440,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Execute check status \"200\" response is true",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 22
+                }
+              ],
+              "location": "CommonApiSteps.ExecuteCheckStatusResponse(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3834029,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Execute check header response as below",
+            "match": {
+              "location": "CommonApiSteps.ExecuteCheckHeaderResponse(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Content-Type",
+                  "Content-Language"
+                ],
+                "line": 18
+              },
+              {
+                "cells": [
+                  "application/json",
+                  "vi"
+                ],
+                "line": 19
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 18057394,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Execute check body response with \"Not Yet\" key as below",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Not Yet",
+                  "offset": 34
+                }
+              ],
+              "location": "CommonApiSteps.ExecuteCheckContentResponse(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "is_active",
+                  "username",
+                  "full_name",
+                  "email",
+                  "phone",
+                  "birth_date",
+                  "expiry_date"
+                ],
+                "line": 21
+              },
+              {
+                "cells": [
+                  "255",
+                  "true",
+                  "nguyenphuc",
+                  "Nguyễn Văn Phuc",
+                  "Nguyenvanphuc2203@gmail.com",
+                  "+84964357189",
+                  "28-04-1997",
+                  "10/14/2020 03:11"
+                ],
+                "line": 22
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3566509,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.SetUp(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 1163520,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 24,
+        "name": "/personal/package/info/",
+        "description": "",
+        "id": "umbalena-api;/personal/package/info/",
+        "after": [
+          {
+            "result": {
+              "duration": 19001390507,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 7900164,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 170391113,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "Execute call \"GET\" method with uri: \"/personal/package/info/\" and token",
+            "match": {
+              "arguments": [
+                {
+                  "val": "GET",
+                  "offset": 14
+                },
+                {
+                  "val": "/personal/package/info/",
+                  "offset": 37
+                }
+              ],
+              "location": "CommonApiSteps.ExecuteAPiWithUriToken(String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1320107,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "Execute check status \"200\" response is true",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 22
+                }
+              ],
+              "location": "CommonApiSteps.ExecuteCheckStatusResponse(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4002989,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "Execute check header response as below",
+            "match": {
+              "location": "CommonApiSteps.ExecuteCheckHeaderResponse(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Content-Type",
+                  "Content-Language"
+                ],
+                "line": 28
+              },
+              {
+                "cells": [
+                  "application/json",
+                  "vi"
+                ],
+                "line": 29
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6070189,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "Execute check body response with \"Not Yet\" key as below",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Not Yet",
+                  "offset": 34
+                }
+              ],
+              "location": "CommonApiSteps.ExecuteCheckContentResponse(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "expiry_date",
+                  "buy_date",
+                  "is_forever"
+                ],
+                "line": 31
+              },
+              {
+                "cells": [
+                  "14-10-2020",
+                  "14-10-2019",
+                  "false"
+                ],
+                "line": 32
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4230402,
+              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:86)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertTrue(Assert.java:52)\r\n\tat com.vooc.Pages.CommonApi.CheckContentResponse(CommonApi.java:125)\r\n\tat com.vooc.StepDefinition.CommonApiSteps.ExecuteCheckContentResponse(CommonApiSteps.java:41)\r\n\tat ✽.Given Execute check body response with \"time_package\" key as below(APiCheck.feature:33)\r\n",
+              "status": "failed"
+            },
+            "line": 33,
+            "name": "Execute check body response with \"time_package\" key as below",
+            "match": {
+              "arguments": [
+                {
+                  "val": "time_package",
+                  "offset": 34
+                }
+              ],
+              "location": "CommonApiSteps.ExecuteCheckContentResponse(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "name",
+                  "price",
+                  "status"
+                ],
+                "line": 34
+              },
+              {
+                "cells": [
+                  "Gói cơ bản",
+                  "619000",
+                  "publish"
+                ],
+                "line": 35
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 12291419,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.SetUp(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 1713921,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 37,
+        "name": "/personal/info/",
+        "description": "",
+        "id": "umbalena-api;/personal/info/",
+        "after": [
+          {
+            "result": {
+              "duration": 1853868,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 2308694,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.TearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 281231907,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "Execute call POST method with uri: \"/personal/info/\" have params below",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/personal/info/",
+                  "offset": 36
+                }
+              ],
+              "location": "CommonApiSteps.ExecuteAPiWithUriHaveParams(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "personal"
+                ],
+                "line": 39
+              },
+              {
+                "cells": [
+                  "nguyenphuc"
+                ],
+                "line": 40
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1125547,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "Execute check status \"200\" response is true",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 22
+                }
+              ],
+              "location": "CommonApiSteps.ExecuteCheckStatusResponse(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4037548,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "Execute check header response as below",
+            "match": {
+              "location": "CommonApiSteps.ExecuteCheckHeaderResponse(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Content-Type",
+                  "Content-Language"
+                ],
+                "line": 43
+              },
+              {
+                "cells": [
+                  "application/json",
+                  "vi"
+                ],
+                "line": 44
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6261336,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "Execute check body response with \"personal\" key as below",
+            "match": {
+              "arguments": [
+                {
+                  "val": "personal",
+                  "offset": 34
+                }
+              ],
+              "location": "CommonApiSteps.ExecuteCheckContentResponse(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "username",
+                  "full_name"
+                ],
+                "line": 46
+              },
+              {
+                "cells": [
+                  "255",
+                  "nguyenphuc",
+                  "Nguyễn Văn Phuc"
+                ],
+                "line": 47
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 16292701,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "Execute check body response with \"kid\" key as below",
+            "match": {
+              "arguments": [
+                {
+                  "val": "kid",
+                  "offset": 34
+                }
+              ],
+              "location": "CommonApiSteps.ExecuteCheckContentResponse(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "full_name",
+                  "level",
+                  "username"
+                ],
+                "line": 49
+              },
+              {
+                "cells": [
+                  "227",
+                  "anabell",
+                  "13",
+                  "anabell"
+                ],
+                "line": 50
+              },
+              {
+                "cells": [
+                  "429",
+                  "phuc123",
+                  "3",
+                  "admin1997"
+                ],
+                "line": 51
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      }
+    ],
+    "name": "Umbalena APi",
+    "description": "Run Umbalena Api script",
+    "id": "umbalena-api",
+    "keyword": "Feature",
+    "uri": "APiCheck.feature"
+  }
+]
