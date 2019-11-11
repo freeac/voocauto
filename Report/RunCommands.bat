@@ -12,6 +12,6 @@ set Sec=%dt:~12,2%
 
 java -jar Reporthtml.jar "%cd%/VOOC_Report_Automation_%YYYY%-%MM%-%DD%_%HH%-%Min%-%Sec%"
 
-java -jar MoveFile.jar "%cd%/Report/VOOC_Report_Automation_%YYYY%-%MM%-%DD%_%HH%-%Min%-%Sec%" "%cd%/Report/backup/VOOC_Report_Automation_%YYYY%-%MM%-%DD%_%HH%-%Min%-%Sec%"
+java -jar MoveFile.jar "%cd%/VOOC_Report_Automation_%YYYY%-%MM%-%DD%_%HH%-%Min%-%Sec%" "%cd%/backup/VOOC_Report_Automation_%YYYY%-%MM%-%DD%_%HH%-%Min%-%Sec%"
 
-java -jar MoveFile.jar "%cd%\Logs\Log.txt" "%cd%\Logs\backup\Log_%YYYY%-%MM%-%DD%_%HH%-%Min%-%Sec%.txt"
+java -jar MoveFile.jar "%cd%/..\Logs\Log.txt" "%cd%/..\Logs\backup\Log_%YYYY%-%MM%-%DD%_%HH%-%Min%-%Sec%.txt"
