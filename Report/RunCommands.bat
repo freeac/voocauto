@@ -20,4 +20,4 @@ java -jar MoveFile.jar "%cd%/..\Logs\Log.txt" "C:\temp\log\Log_%YYYY%-%MM%-%DD%_
 
 java -jar SendMail.jar "C:\temp\report\VOOC_Report_Automation_%YYYY%-%MM%-%DD%_%HH%-%Min%-%Sec%.zip" nhanvuong@vooc.vn
 
-java -jar DeleteFile.jar 1 "C:\temp\report\Report_APi_%YYYY%-%MM%-%DD%_%HH%-%Min%-%Sec%.zip"
+java -jar DeleteFile.jar 1 "C:\temp\report\VOOC_Report_Automation_%YYYY%-%MM%-%DD%_%HH%-%Min%-%Sec%.zip"
