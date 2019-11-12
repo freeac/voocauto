@@ -18,7 +18,7 @@ public class CommonApiSteps extends CommonApi {
 		CallApiWithUriToken(type, apiUri);
 	}
 
-	@Given("^Execute call POST method with uri: \"(.*)\" have params below$")
+	@Given("^Execute call GET method with uri: \"(.*)\" have params below$")
 	public void ExecuteAPiWithUriHaveParams(String apiUri, DataTable params) throws Throwable {
 		List<List<String>> list = params.raw();
 		CallApiWithUriHaveParams(apiUri, list);

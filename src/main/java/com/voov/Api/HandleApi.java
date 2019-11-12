@@ -6,7 +6,9 @@ import java.util.Map;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPatch;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpPut;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
 
@@ -101,6 +103,52 @@ public class HandleApi {
 			request.setEntity(strEntity);
 			response = client.execute(request);
 		} catch (Exception e) {
+			e.getMessage();
+		}
+		return response;
+	}
+
+	public HttpResponse ExecuteRequestPutMethodToUri(String _requestUri) {
+		String requestUri = GetPropertiesFile.GetContentPropFile("APiUrl") + _requestUri;
+		HttpResponse response = null;
+		String ApiName = _requestUri.replaceAll(".$", "").replaceFirst("^.", "");
+		String pageName = ApiName.replace("/", "-");
+		HttpClient client = HttpClientBuilder.create().build();
+		HttpPut request = new HttpPut(requestUri);
+		Map<String, String> map = JsonFile.GetHeader(pageName);
+		for (Map.Entry<String, String> entry : map.entrySet()) {
+			request.addHeader(entry.getKey(), entry.getValue());
+		}
+		String _requestContent = JsonFile.GetBodyContent(pageName);
+		try {
+			StringEntity strEntity = new StringEntity(_requestContent);
+			request.setEntity(strEntity);
+			response = client.execute(request);
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.getMessage();
+		}
+		return response;
+	}
+
+	public HttpResponse ExecuteRequestPatchMethodToUri(String _requestUri) {
+		String requestUri = GetPropertiesFile.GetContentPropFile("APiUrl") + _requestUri;
+		HttpResponse response = null;
+		String ApiName = _requestUri.replaceAll(".$", "").replaceFirst("^.", "");
+		String pageName = ApiName.replace("/", "-");
+		HttpClient client = HttpClientBuilder.create().build();
+		HttpPatch request = new HttpPatch(requestUri);
+		Map<String, String> map = JsonFile.GetHeader(pageName);
+		for (Map.Entry<String, String> entry : map.entrySet()) {
+			request.addHeader(entry.getKey(), entry.getValue());
+		}
+		String _requestContent = JsonFile.GetBodyContent(pageName);
+		try {
+			StringEntity strEntity = new StringEntity(_requestContent);
+			request.setEntity(strEntity);
+			response = client.execute(request);
+		} catch (Exception e) {
+			// TODO: handle exception
 			e.getMessage();
 		}
 		return response;
