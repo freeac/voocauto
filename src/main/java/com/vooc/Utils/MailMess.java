@@ -18,7 +18,7 @@ import org.apache.http.impl.client.HttpClientBuilder;
 public class MailMess {
 	public static void SendMail(String apiName) {
 		String username = GetPropertiesFile.GetContentPropFile("EmailUsername");
-		String password = GetPropertiesFile.GetContentPropFile("EmailPassword");
+		String password = ConvertType.DecodeBase64(GetPropertiesFile.GetContentPropFile("EmailPassword"));
 		String recipient = GetPropertiesFile.GetContentPropFile("EmailTo");
 
 		Properties props = new Properties();

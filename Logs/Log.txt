@@ -1,0 +1,111 @@
+2019.11.12 12.33.33 ==> :::: /accounts/login/ ::::
+2019.11.12 12.33.33 ==> :: APi is started ::
+2019.11.12 12.33.33 ==> :: Scenario is Started ::
+2019.11.12 12.33.35 ==> Token is [eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ndXllbnBodWMiLCJvcmlnX2lhdCI6MTU3MzUzNjgxNSwiZXhwIjoxNTczNTM3MTE1LCJwcm92aWRlciI6InBlcnNvbmFsIiwidXNlcl9pZCI6MjU1LCJlbWFpbCI6Ik5ndXllbnZhbnBodWMyMjAzQGdtYWlsLmNvbSIsImRldmljZV9pZCI6IjEyMzEyMzEyMzEyMzEyMzIifQ.10FpSeOZqjwxAFmF5d8blUPF1kEnsbzLL9uJFAc7Uh4]
+2019.11.12 12.33.35 ==> Status acutal 200 Status expected 200
+2019.11.12 12.33.35 ==> Header Response actual: Content-Type: application/json
+2019.11.12 12.33.35 ==> Header Response expected: Content-Type: application/json
+2019.11.12 12.33.35 ==> Header Response actual: Content-Language: vi
+2019.11.12 12.33.35 ==> Header Response expected: Content-Language: vi
+2019.11.12 12.33.35 ==> Body Response actual: 255
+2019.11.12 12.33.35 ==> Body Response expected: 255
+2019.11.12 12.33.35 ==> Body Response actual: true
+2019.11.12 12.33.35 ==> Body Response expected: true
+2019.11.12 12.33.35 ==> Body Response actual: nguyenphuc
+2019.11.12 12.33.35 ==> Body Response expected: nguyenphuc
+2019.11.12 12.33.35 ==> Body Response actual: Nguyễn Văn Phuc
+2019.11.12 12.33.35 ==> Body Response expected: Nguyễn Văn Phuc
+2019.11.12 12.33.35 ==> Body Response actual: Nguyenvanphuc2203@gmail.com
+2019.11.12 12.33.35 ==> Body Response expected: Nguyenvanphuc2203@gmail.com
+2019.11.12 12.33.35 ==> Body Response actual: +84964357189
+2019.11.12 12.33.35 ==> Body Response expected: +84964357189
+2019.11.12 12.33.35 ==> Body Response actual: 28-04-1997
+2019.11.12 12.33.35 ==> Body Response expected: 28-04-1997
+2019.11.12 12.33.35 ==> Body Response actual: 10/14/2020 03:11
+2019.11.12 12.33.35 ==> Body Response expected: 10/14/2020 03:11
+2019.11.12 12.33.35 ==> ::Result ==> Passed
+2019.11.12 12.33.35 ==> :: Scenario is Stopped ::
+2019.11.12 12.33.35 ==> :: APi is Stopped ::
+2019.11.12 12.33.35 ==> :::: /profile/user/ ::::
+2019.11.12 12.33.35 ==> :: APi is started ::
+2019.11.12 12.33.35 ==> :: Scenario is Started ::
+2019.11.12 12.33.35 ==> Status acutal 200 Status expected 200
+2019.11.12 12.33.35 ==> Header Response actual: Content-Type: application/json
+2019.11.12 12.33.35 ==> Header Response expected: Content-Type: application/json
+2019.11.12 12.33.35 ==> Header Response actual: Content-Language: vi
+2019.11.12 12.33.35 ==> Header Response expected: Content-Language: vi
+2019.11.12 12.33.35 ==> Body Response actual: 255
+2019.11.12 12.33.35 ==> Body Response expected: 255
+2019.11.12 12.33.35 ==> Body Response actual: true
+2019.11.12 12.33.35 ==> Body Response expected: true
+2019.11.12 12.33.35 ==> Body Response actual: nguyenphuc
+2019.11.12 12.33.35 ==> Body Response expected: nguyenphuc
+2019.11.12 12.33.35 ==> Body Response actual: Nguyễn Văn Phuc
+2019.11.12 12.33.35 ==> Body Response expected: Nguyễn Văn Phuc
+2019.11.12 12.33.35 ==> Body Response actual: Nguyenvanphuc2203@gmail.com
+2019.11.12 12.33.35 ==> Body Response expected: Nguyenvanphuc2203@gmail.com
+2019.11.12 12.33.35 ==> Body Response actual: +84964357189
+2019.11.12 12.33.35 ==> Body Response expected: +84964357189
+2019.11.12 12.33.35 ==> Body Response actual: 28-04-1997
+2019.11.12 12.33.35 ==> Body Response expected: 28-04-1997
+2019.11.12 12.33.35 ==> Body Response actual: 10/14/2020 03:11
+2019.11.12 12.33.35 ==> Body Response expected: 10/14/2020 03:11
+2019.11.12 12.33.35 ==> ::Result ==> Passed
+2019.11.12 12.33.35 ==> :: Scenario is Stopped ::
+2019.11.12 12.33.35 ==> :: APi is Stopped ::
+2019.11.12 12.33.35 ==> :::: /personal/package/info/ ::::
+2019.11.12 12.33.35 ==> :: APi is started ::
+2019.11.12 12.33.35 ==> :: Scenario is Started ::
+2019.11.12 12.33.35 ==> Status acutal 200 Status expected 200
+2019.11.12 12.33.35 ==> Header Response actual: Content-Type: application/json
+2019.11.12 12.33.35 ==> Header Response expected: Content-Type: application/json
+2019.11.12 12.33.35 ==> Header Response actual: Content-Language: vi
+2019.11.12 12.33.35 ==> Header Response expected: Content-Language: vi
+2019.11.12 12.33.35 ==> Body Response actual: 14-10-2020
+2019.11.12 12.33.35 ==> Body Response expected: 14-10-2020
+2019.11.12 12.33.35 ==> Body Response actual: 14-10-2019
+2019.11.12 12.33.35 ==> Body Response expected: 14-10-2019
+2019.11.12 12.33.35 ==> Body Response actual: false
+2019.11.12 12.33.36 ==> Body Response expected: false
+2019.11.12 12.33.36 ==> Body Response actual: Gói cơ bản
+2019.11.12 12.33.36 ==> Body Response expected: Gói cơ bản
+2019.11.12 12.33.36 ==> Body Response actual: 699000
+2019.11.12 12.33.36 ==> Body Response expected: 699000
+2019.11.12 12.33.36 ==> Body Response actual: publish
+2019.11.12 12.33.36 ==> Body Response expected: publish
+2019.11.12 12.33.36 ==> ::Result ==> Passed
+2019.11.12 12.33.36 ==> :: Scenario is Stopped ::
+2019.11.12 12.33.36 ==> :: APi is Stopped ::
+2019.11.12 12.33.36 ==> :::: /personal/info/ ::::
+2019.11.12 12.33.36 ==> :: APi is started ::
+2019.11.12 12.33.36 ==> :: Scenario is Started ::
+2019.11.12 12.33.36 ==> Status acutal 200 Status expected 200
+2019.11.12 12.33.36 ==> Header Response actual: Content-Type: application/json
+2019.11.12 12.33.36 ==> Header Response expected: Content-Type: application/json
+2019.11.12 12.33.36 ==> Header Response actual: Content-Language: vi
+2019.11.12 12.33.36 ==> Header Response expected: Content-Language: vi
+2019.11.12 12.33.36 ==> Body Response actual: 255
+2019.11.12 12.33.36 ==> Body Response expected: 255
+2019.11.12 12.33.36 ==> Body Response actual: nguyenphuc
+2019.11.12 12.33.36 ==> Body Response expected: nguyenphuc
+2019.11.12 12.33.36 ==> Body Response actual: Nguyễn Văn Phuc
+2019.11.12 12.33.36 ==> Body Response expected: Nguyễn Văn Phuc
+2019.11.12 12.33.36 ==> Body Response actual: 227
+2019.11.12 12.33.36 ==> Body Response expected: 227
+2019.11.12 12.33.36 ==> Body Response actual: anabell
+2019.11.12 12.33.36 ==> Body Response expected: anabell
+2019.11.12 12.33.36 ==> Body Response actual: 13
+2019.11.12 12.33.36 ==> Body Response expected: 13
+2019.11.12 12.33.36 ==> Body Response actual: anabell
+2019.11.12 12.33.36 ==> Body Response expected: anabell
+2019.11.12 12.33.36 ==> Body Response actual: 429
+2019.11.12 12.33.36 ==> Body Response expected: 429
+2019.11.12 12.33.36 ==> Body Response actual: phuc123
+2019.11.12 12.33.36 ==> Body Response expected: phuc123
+2019.11.12 12.33.36 ==> Body Response actual: 3
+2019.11.12 12.33.36 ==> Body Response expected: 3
+2019.11.12 12.33.36 ==> Body Response actual: admin1997
+2019.11.12 12.33.36 ==> Body Response expected: admin1997
+2019.11.12 12.33.36 ==> ::Result ==> Passed
+2019.11.12 12.33.36 ==> :: Scenario is Stopped ::
+2019.11.12 12.33.36 ==> :: APi is Stopped ::
