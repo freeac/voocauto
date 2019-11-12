@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
+import java.util.Base64;
 
 public class ConvertType {
 	public static String ConvertIntToString(int i) {
@@ -25,6 +26,12 @@ public class ConvertType {
 	public static int ConvertStringToInt(String str) {
 		int i = Integer.parseInt(str);
 		return i;
+	}
+	
+	public static String DecodeBase64(String encodeStr) {
+		byte[] decodedBytes = Base64.getDecoder().decode(encodeStr);
+		String decodedString = new String(decodedBytes);
+		return decodedString;
 	}
 
 	public static String convertStreamToString(InputStream is) {
