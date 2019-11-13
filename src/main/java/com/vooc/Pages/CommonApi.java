@@ -33,6 +33,14 @@ public class CommonApi extends HandleApi {
 			response = null;
 			response = ExecuteRequestPostMethodToUri(apiUri);
 		}
+		if (type.toUpperCase().equals("PUT")) {
+			response = null;
+			response = ExecuteRequestPutMethodToUri(apiUri);
+		}
+		if (type.toUpperCase().equals("PATCH")) {
+			response = null;
+			response = ExecuteRequestPatchMethodToUri(apiUri);
+		}
 		GetResponseContent();
 	}
 
@@ -80,9 +88,11 @@ public class CommonApi extends HandleApi {
 	public void CheckContentResponse(String key, List<List<String>> listContent) {
 		try {
 			if (key.toUpperCase().equals("NOT YET")) {
+				// In case, JSON response JSONArray return
 				if (obj instanceof JSONArray) {
 					JSONArray ja = (JSONArray) obj;
 					JSONObject josj = null;
+					// In case JSONArray have 2 record, listContent have 3 record (1 header and 2 row value)
 					for (int i = 0; i < ja.size(); i++) {
 						josj = (JSONObject) ja.get(i);
 						for (int j = 0; j < listContent.get(0).size(); j++) {
