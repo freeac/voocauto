@@ -20,6 +20,8 @@ public class CommonApi extends HandleApi {
 	HttpResponse response = null;
 	String token = null;
 	JSONObject jo = null;
+	Object obj = null;
+	String result = null;
 	Logger log = new Logger();
 
 	public void CallApiWithUri(String type, String apiUri) {
@@ -78,16 +80,35 @@ public class CommonApi extends HandleApi {
 	public void CheckContentResponse(String key, List<List<String>> listContent) {
 		try {
 			if (key.toUpperCase().equals("NOT YET")) {
-				for (int i = 0; i < listContent.get(0).size(); i++) {
-					Object val = jo.get(listContent.get(0).get(i));
-					String actContent = ConvertType.ConvertStringToUTF8(val.toString());
-					if (actContent == null) {
-						Assert.assertNotNull(actContent);
+				if (obj instanceof JSONArray) {
+					JSONArray ja = (JSONArray) obj;
+					JSONObject josj = null;
+					for (int i = 0; i < ja.size(); i++) {
+						josj = (JSONObject) ja.get(i);
+						for (int j = 0; j < listContent.get(0).size(); j++) {
+							Object val = josj.get(listContent.get(0).get(j));
+							String actContent = ConvertType.ConvertStringToUTF8(val.toString());
+							if (actContent == null) {
+								Assert.assertNotNull(actContent);
+							}
+							String expContent = listContent.get(i + 1).get(j);
+							log.Info("Body Response actual: " + actContent);
+							log.Info("Body Response expected: " + expContent);
+							Assert.assertTrue(actContent.equals(expContent));
+						}
 					}
-					String expContent = listContent.get(1).get(i);
-					log.Info("Body Response actual: " + actContent);
-					log.Info("Body Response expected: " + expContent);
-					Assert.assertTrue(actContent.equals(expContent));
+				} else {
+					for (int i = 0; i < listContent.get(0).size(); i++) {
+						Object val = jo.get(listContent.get(0).get(i));
+						String actContent = ConvertType.ConvertStringToUTF8(val.toString());
+						if (actContent == null) {
+							Assert.assertNotNull(actContent);
+						}
+						String expContent = listContent.get(1).get(i);
+						log.Info("Body Response actual: " + actContent);
+						log.Info("Body Response expected: " + expContent);
+						Assert.assertTrue(actContent.equals(expContent));
+					}
 				}
 			} else {
 				Object KeyObj = (Object) jo.get(key);
@@ -138,13 +159,17 @@ public class CommonApi extends HandleApi {
 			InputStream strResponse;
 			try {
 				strResponse = _entity.getContent();
-				String result = ConvertType.convertStreamToString(strResponse);
-				Object obj = new JSONParser().parse(result);
-				jo = (JSONObject) obj;
-				if (jo.get("token") != null) {
-					token = jo.get("token").toString();
-					TxtFile.ExecuteWriteToken(token);
-					log.Info("Token is [" + token + "]");
+				result = ConvertType.convertStreamToString(strResponse);
+				obj = new JSONParser().parse(result);
+				if (obj instanceof JSONArray) {
+
+				} else {
+					jo = (JSONObject) obj;
+					if (jo.get("token") != null) {
+						token = jo.get("token").toString();
+						TxtFile.ExecuteWriteToken(token);
+						log.Info("Token is [" + token + "]");
+					}
 				}
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
