@@ -53,16 +53,8 @@ Feature: Umbalena APi
     Given Execute call "GET" method with uri: "/promotion/data/" and token
     Given Execute check status "200" response is true
 
-  Scenario: /send/otp/forgot/password/
-    Given Execute call "POST" APi with uri: "/send/otp/forgot/password/"
-    Given Execute check status "200" response is true
-
   Scenario: /time/package/list/
     Given Execute call "GET" method with uri: "/time/package/list/" and token
-    Given Execute check status "200" response is true
-
-  Scenario: /user/resend/active/
-    Given Execute call "PATCH" APi with uri: "/user/resend/active/"
     Given Execute check status "200" response is true
 
   Scenario: /admin/operation/core/book/
