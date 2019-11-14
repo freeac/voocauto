@@ -11,10 +11,10 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.junit.Assert;
 
+import com.vooc.Api.HandleApi;
 import com.vooc.Utils.ConvertType;
 import com.vooc.Utils.Logger;
 import com.vooc.Utils.TxtFile;
-import com.voov.Api.HandleApi;
 
 public class CommonApi extends HandleApi {
 	HttpResponse response = null;
@@ -40,6 +40,18 @@ public class CommonApi extends HandleApi {
 		if (type.toUpperCase().equals("PATCH")) {
 			response = null;
 			response = ExecuteRequestPatchMethodToUri(apiUri);
+		}
+		GetResponseContent();
+	}
+
+	public void CallApiWithNameAndUri(String type, String apiName, String apiUri) {
+		if (type.toUpperCase().equals("GET")) {
+			response = null;
+			response = ExecuteRequestGetMethodToUri(apiUri);
+		}
+		if (type.toUpperCase().equals("POST")) {
+			response = null;
+			response = ExecuteRequestPostMethodToUriWithName(apiUri, apiName);
 		}
 		GetResponseContent();
 	}

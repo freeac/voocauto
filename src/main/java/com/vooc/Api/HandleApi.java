@@ -1,4 +1,4 @@
-package com.voov.Api;
+package com.vooc.Api;
 
 import java.util.List;
 import java.util.Map;
@@ -115,6 +115,28 @@ public class HandleApi {
 		HttpPost request = new HttpPost(requestUri);
 		request.addHeader("Authorization", token);
 		try {
+			response = client.execute(request);
+		} catch (Exception e) {
+			e.getMessage();
+		}
+		return response;
+	}
+	
+	public HttpResponse ExecuteRequestPostMethodToUriWithName(String _requestUri, String apiName) {
+		String requestUri = GetPropertiesFile.GetContentPropFile("APiUrl") + _requestUri;
+		HttpResponse response = null;
+		String ApiName = _requestUri.replaceAll(".$", "").replaceFirst("^.", "");
+		String pageName = ApiName.replace("/", "-") + "-" + apiName;
+		HttpClient client = HttpClientBuilder.create().build();
+		HttpPost request = new HttpPost(requestUri);
+		Map<String, String> map = JsonFile.GetHeader(pageName);
+		for (Map.Entry<String, String> entry : map.entrySet()) {
+			request.addHeader(entry.getKey(), entry.getValue());
+		}
+		String _requestContent = JsonFile.GetBodyContent(pageName);
+		try {
+			StringEntity strEntity = new StringEntity(_requestContent);
+			request.setEntity(strEntity);
 			response = client.execute(request);
 		} catch (Exception e) {
 			e.getMessage();

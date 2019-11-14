@@ -3,9 +3,9 @@
 		"Content-Type": "application/json"
 	},
 	"Params": {
-		"username": "freeac",
-		"password": "Abcd1234",
-		"provider": "personal",
+		"username": "nhanvuong",
+		"password": "Nhan1234",
+		"provider": "staff",
 		"device_id": "1231231231231231"
 	}
 }

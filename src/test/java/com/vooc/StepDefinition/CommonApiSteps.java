@@ -12,6 +12,11 @@ public class CommonApiSteps extends CommonApi {
 	public void ExecuteAPiWithUri(String type, String apiUri) throws Throwable {
 		CallApiWithUri(type, apiUri);
 	}
+	
+	@Given("^Execute call \"(.*)\" method with \"(.*)\" APi and uri: \"(.*)\"$")
+	public void ExecuteAPiWithUriAndName(String type, String apiName, String apiUri) throws Throwable {
+		CallApiWithNameAndUri(type, apiName, apiUri);
+	}
 
 	@Given("^Execute call \"(.*)\" method with uri: \"(.*)\" and token$")
 	public void ExecuteAPiWithUriToken(String type, String apiUri) throws Throwable {
