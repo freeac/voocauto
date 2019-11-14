@@ -69,10 +69,6 @@ Feature: Umbalena APi
     Given Execute call "GET" method with uri: "/admin/operation/core/book/" and token
     Given Execute check status "200" response is true
 
-  Scenario: /admin/operation/core/book/{id}/
-    Given Execute call "GET" method with uri: "/admin/operation/core/book/1/" and token
-    Given Execute check status "200" response is true
-
   Scenario: /admin/operation/core/group/
     Given Execute call "GET" method with uri: "/admin/operation/core/group/" and token
     Given Execute check status "200" response is true
