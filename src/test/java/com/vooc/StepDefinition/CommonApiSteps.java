@@ -40,4 +40,9 @@ public class CommonApiSteps extends CommonApi {
 		List<List<String>> list = bodyRes.raw();
 		CheckContentResponse(key, list);
 	}
+	
+	@Given("^Execute call POST method nobody with uri: \"(.*)\" and token$")
+	public void ExecutePostApiWithNoBody(String apiUrl) throws Throwable {
+		CallApiWithNoBody(apiUrl);
+	}
 }

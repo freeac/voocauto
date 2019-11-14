@@ -57,6 +57,13 @@ public class CommonApi extends HandleApi {
 		GetResponseContent();
 	}
 
+	public void CallApiWithNoBody(String apiUri) {
+		String bearerToken = "Bearer " + TxtFile.ExecuteReadToken();
+		response = null;
+		response = ExecuteRequestPostMethodNoBodyWithToken(apiUri, bearerToken);
+		GetResponseContent();
+	}
+
 	public void CallApiWithUriHaveParams(String apiUri, List<List<String>> params) {
 		String bearerToken = "Bearer " + TxtFile.ExecuteReadToken();
 		response = null;
@@ -92,7 +99,8 @@ public class CommonApi extends HandleApi {
 				if (obj instanceof JSONArray) {
 					JSONArray ja = (JSONArray) obj;
 					JSONObject josj = null;
-					// In case JSONArray have 2 record, listContent have 3 record (1 header and 2 row value)
+					// In case JSONArray have 2 record, listContent have 3 record (1 header and 2
+					// row value)
 					for (int i = 0; i < ja.size(); i++) {
 						josj = (JSONObject) ja.get(i);
 						for (int j = 0; j < listContent.get(0).size(); j++) {

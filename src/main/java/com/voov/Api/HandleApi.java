@@ -108,6 +108,20 @@ public class HandleApi {
 		return response;
 	}
 
+	public HttpResponse ExecuteRequestPostMethodNoBodyWithToken(String _requestUri, String token) {
+		String requestUri = GetPropertiesFile.GetContentPropFile("APiUrl") + _requestUri;
+		HttpResponse response = null;
+		HttpClient client = HttpClientBuilder.create().build();
+		HttpPost request = new HttpPost(requestUri);
+		request.addHeader("Authorization", token);
+		try {
+			response = client.execute(request);
+		} catch (Exception e) {
+			e.getMessage();
+		}
+		return response;
+	}
+
 	public HttpResponse ExecuteRequestPutMethodToUri(String _requestUri) {
 		String requestUri = GetPropertiesFile.GetContentPropFile("APiUrl") + _requestUri;
 		HttpResponse response = null;
